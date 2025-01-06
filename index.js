@@ -63,19 +63,70 @@ function checkStrength(){
  if(LowerCaseInput.checked) checked++;
  if(NumbersInput.checked) checked++;
  if(symbolsInput.checked) checked++;
- if(length > 8) return "easy";
- else if (length < 10 && checked == 1) return "medium"
- else if (length >= 8 && checked ==1) return "easy"
-  else if (length >= 8 && checked >1 && checked < 4) return "medium"
-   else if (length >= 8 && checked ==4) return "hard"
+
+ if(checked == 1){
+  console.log("easy")
+  return "easy"
 }
 
+else if (checked == 2 && length >= 8){
+  console.log("medium")
+  return "medium"
+}
+else if (checked == 2 && length < 8){
+  console.log("easy")
+  return "easy"
+}
+
+else if (checked == 3 && length <= 5){
+  console.log("easy")
+  return "easy"
+}
+
+else if (checked == 3 && length > 5){
+  console.log("medium")
+  return "medium"
+}
+
+else if (checked == 4 && length > 5){
+  console.log("hard")
+  return "hard"
+}
+
+else if (checked == 4 && length <= 5){
+  console.log("medium")
+  return "medium"
+}
+
+//  if(length > 8) return "easy";
+
+// else if (length < 8 && checked == 1){
+//   return "easy"
+// }
+// else if (length <= 8 && checked == 1){
+//   return "easy"
+// }
+
+// else if (length <= 8 && checked == 2){
+//   console.log("easy")
+//   return "easy"
+// }
+
+
+
+// if(length >= 8){
+//   console.log("medium")
+// }
 
 
 
 
 
-
+//  else if (length <= 10 && checked == 1) return "medium"
+//  else if (length >= 8 && checked ==1) return "easy"
+//   else if (length >= 8 && checked >1 && checked < 4) return "medium"
+//    else if (length >= 8 && checked ==4) return "hard"
+}
 
 CopyIcon.addEventListener("click",function(){
     const text = PasswordHtml.innerHTML
